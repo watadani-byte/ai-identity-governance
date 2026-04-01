@@ -127,18 +127,19 @@ The Auditor’s role is verification, not operation.
 The following table defines which roles hold authority
 over each governance action.
 
-|Action                                 |Monitor|Operator|Approver|Auditor|
-|---------------------------------------|-------|--------|--------|-------|
-|Generate drift signal                  |✓      |—       |—       |—      |
-|Notify Operator of anomaly             |✓      |—       |—       |—      |
-|Confirm state transition (L0↔L1, L1↔L2)|—      |✓       |—       |—      |
-|Trigger Emergency Stop (L2→L3)         |—      |✓       |—       |—      |
-|Initiate human review (L3→L4)          |—      |✓       |—       |—      |
-|Request recovery approval              |—      |✓       |—       |—      |
-|Approve recovery (L4→L0)               |—      |—       |✓       |—      |
-|Override exceptional conditions        |—      |—       |✓       |—      |
-|Access audit log (read)                |—      |✓       |✓       |✓      |
-|Audit log verification                 |—      |—       |—       |✓      |
+|Action                                     |Monitor|Operator|Approver|Auditor|
+|-------------------------------------------|-------|--------|--------|-------|
+|Generate drift signal                      |✓      |—       |—       |—      |
+|Notify Operator of anomaly                 |✓      |—       |—       |—      |
+|Confirm state transition (L0↔L1, L1↔L2)    |—      |✓       |—       |—      |
+|Trigger Emergency Stop (L2→L3)             |—      |✓       |—       |—      |
+|Initiate human review (L3→L4)              |—      |✓       |—       |—      |
+|Confirm Recovery Standby transition (L3→L4)|—      |—       |✓       |—      |
+|Request recovery approval                  |—      |✓       |—       |—      |
+|Approve recovery (L4→L0)                   |—      |—       |✓       |—      |
+|Override exceptional conditions            |—      |—       |✓       |—      |
+|Access audit log (read)                    |—      |✓       |✓       |✓      |
+|Audit log verification                     |—      |—       |—       |✓      |
 
 -----
 
@@ -162,7 +163,7 @@ over each governance action.
 |Monitor |Intensified monitoring. Maintain signal generation.                                |
 |Operator|Acknowledge notification. Assess situation. Determine if L2 transition is required.|
 |Approver|Available for consultation. Not required to act unless escalated.                  |
-|Auditor |Log anomaly event. No active intervention.                                         |
+|Auditor |Review anomaly log entry for completeness as required.                             |
 
 -----
 
@@ -173,18 +174,18 @@ over each governance action.
 |Monitor |Continuous monitoring under containment.                                     |
 |Operator|Manage containment. Consult Approver. Determine if L3 transition is required.|
 |Approver|Consulted by Operator. Available for mandatory review if L3 triggered.       |
-|Auditor |Log all transition events and operator decisions.                            |
+|Auditor |Verify that transition and operator decision records are complete.           |
 
 -----
 
 ### L3 — Emergency Stop
 
-|Role    |Responsibility                                                       |
-|--------|---------------------------------------------------------------------|
-|Monitor |Monitoring continues. Signal generation maintained.                  |
-|Operator|Initiate human review. Document incident. Prepare recovery request.  |
-|Approver|Mandatory review. Confirm L4 transition.                             |
-|Auditor |Log Emergency Stop event. Verify incident documentation completeness.|
+|Role    |Responsibility                                                     |
+|--------|-------------------------------------------------------------------|
+|Monitor |Monitoring continues. Signal generation maintained.                |
+|Operator|Initiate human review. Document incident. Prepare recovery request.|
+|Approver|Mandatory review. Confirm L4 transition.                           |
+|Auditor |Verify Emergency Stop and incident records for completeness.       |
 
 -----
 
@@ -195,7 +196,7 @@ over each governance action.
 |Monitor |Monitoring maintained in standby mode.                                           |
 |Operator|Complete Recovery Procedure prerequisites. Submit recovery request to Approver.  |
 |Approver|Review recovery request. Grant or withhold approval. Log decision with rationale.|
-|Auditor |Audit recovery procedure documentation. Verify approval record completeness.     |
+|Auditor |Verify recovery procedure documentation and approval record completeness.        |
 
 -----
 
