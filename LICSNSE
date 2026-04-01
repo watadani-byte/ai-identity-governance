@@ -1,0 +1,77 @@
+# LICENSE
+
+This repository contains files under two separate licenses.
+Please read both sections carefully before using any materials.
+
+-----
+
+## Part 1 — Documentation and Governance Files
+
+**Applies to:** `docs/`, `governance/`, `README.md`
+
+Licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0).
+
+You are free to:
+
+- Share — copy and redistribute the material in any medium or format
+- Adapt — remix, transform, and build upon the material for any purpose, even commercially
+
+Under the following terms:
+
+- Attribution — You must give appropriate credit, provide a link to the license,
+  and indicate if changes were made.
+
+Full license text:
+https://creativecommons.org/licenses/by/4.0/
+
+-----
+
+## Part 2 — Specification Files
+
+**Applies to:** `spec/`
+
+Copyright 2026 Watadani. All rights reserved.
+
+### Permitted
+
+- Viewing this specification for personal or organizational understanding
+- Citation and conceptual reference in research, documentation, or academic work
+- Discussion of the concepts described in this specification
+
+### Not Permitted Without Prior Written Permission
+
+The following are not permitted without prior written permission from the copyright holder:
+
+- Implementation of systems based on this specification, in whole or in part
+- Redistribution of this specification or modified versions thereof
+- Commercial deployment of any system based on this specification
+- Creation of derivative works for commercial use
+- Incorporation of this specification into products or services
+
+### No Warranty
+
+This specification is provided as-is, without warranty of any kind,
+express or implied. The copyright holder makes no representations
+about the suitability of this specification for any purpose.
+
+### Contact
+
+For licensing inquiries or permission requests, contact via:
+https://github.com/watadani-byte/ai-identity-governance
+
+-----
+
+## Summary
+
+|File location|License                                 |
+|-------------|----------------------------------------|
+|`docs/`      |CC BY 4.0                               |
+|`governance/`|CC BY 4.0                               |
+|`README.md`  |CC BY 4.0                               |
+|`spec/`      |All rights reserved — custom terms above|
+|`images/`    |CC BY 4.0                               |
+|`examples/`  |CC BY 4.0                               |
+
+-----
+
+*Last updated: March 2026*
