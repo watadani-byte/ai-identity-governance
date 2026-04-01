@@ -62,7 +62,7 @@ and re-convergence logic.
 This repository extends those primitives into a
 general-purpose operational control layer, applicable
 to any AI system requiring identity-consistent,
-auditable behavior:
+auditable, and controlled behavior:
 
 - Customer-facing conversational AI
 - Agentic workflows
@@ -161,7 +161,7 @@ You may read, share, and adapt with attribution.
 **Specification files** (`spec/`):
 All rights reserved — 2026.
 
-Viewing and conceptual reference are permitted.
+Viewing, citation, and conceptual reference are permitted.
 The following are not permitted without written permission:
 
 - Implementation based on this specification
