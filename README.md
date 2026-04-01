@@ -134,7 +134,7 @@ This repository is under active development.
 
 All specifications are draft versions.
 The JSON control protocol is v0.2 and subject to change.
-Controlled validation has not been completed.
+Formal validation has not yet been completed.
 
 > This is a governance framework, not a validated production system.
 > Deploy with appropriate institutional review.
