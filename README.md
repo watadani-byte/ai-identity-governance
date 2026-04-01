@@ -4,9 +4,7 @@ AI systems drift.
 Drift is not a failure. It is expected behavior.
 This repository defines how to govern it.
 
-> An operational control framework for identity-consistent,
-> auditable AI systems — extending CIP into governance,
-> state management, and intervention design.
+> An operational control framework for identity-consistent, auditable AI systems.
 
 *Licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 (docs / governance) — Spec files: All rights reserved — 2026*
@@ -56,13 +54,15 @@ The framework addresses:
 This framework builds on the
 [Character Identity Protocol (CIP)](https://github.com/watadani-byte/character-identity-protocol).
 
-CIP defines the governance model for identity convergence
-in generative systems — originally developed in the context
-of character identity stabilization in image generation.
+CIP defines the foundational governance primitives for
+identity convergence in generative systems — including
+anchor management, identity validation gates, Hard Abort,
+and re-convergence logic.
 
-This repository extends that model into a general-purpose
-operational control layer, applicable to any AI system
-requiring identity-consistent, auditable behavior:
+This repository extends those primitives into a
+general-purpose operational control layer, applicable
+to any AI system requiring identity-consistent,
+auditable behavior:
 
 - Customer-facing conversational AI
 - Agentic workflows
@@ -77,20 +77,20 @@ requiring identity-consistent, auditable behavior:
 
 The framework defines five operational states:
 
-|State |Name            |Description                                       |
-|------|----------------|--------------------------------------------------|
-|**L0**|Normal Operation|Identity within defined bounds. Full capability.  |
-|**L1**|Anomaly Detected|Drift indicators observed. Monitoring intensified.|
-|**L2**|Safe Operation  |Capability reduced. Drift containment active.     |
-|**L3**|Emergency Stop  |Hard Abort triggered. All output halted.          |
-|**L4**|Recovery Standby|Awaiting human approval before re-convergence.    |
+|State |Name            |Description                                                                      |
+|------|----------------|---------------------------------------------------------------------------------|
+|**L0**|Normal Operation|Identity within defined bounds. Full capability.                                 |
+|**L1**|Anomaly Detected|Drift indicators observed. Monitoring intensified. Intervention readiness raised.|
+|**L2**|Safe Mode       |Capability reduced. Drift containment active.                                    |
+|**L3**|Emergency Stop  |Hard Abort triggered. All output halted.                                         |
+|**L4**|Recovery Standby|Awaiting human review and approval before re-convergence.                        |
 
 **Design principles:**
 
 - High performance is not the primary objective
 - Safety-side failure is always preferred over continuation
 - Human intervention points are defined in advance
-- Recovery is never automatic — it requires approval
+- Recovery is never automatic — it requires human review and approval
 - All state transitions are logged for audit
 
 -----
@@ -145,10 +145,31 @@ Controlled validation has not been completed.
 
 |            |[character-identity-protocol](https://github.com/watadani-byte/character-identity-protocol)|ai-identity-governance                   |
 |------------|-------------------------------------------------------------------------------------------|-----------------------------------------|
-|**Focus**   |Concept · Hypothesis · Observation                                                         |Control · Governance · Specification     |
-|**Layer**   |Conceptual framework                                                                       |Operational implementation layer         |
+|**Focus**   |Identity governance primitives                                                             |Operational control layer                |
+|**Layer**   |Foundational governance framework                                                          |Implementation and specification         |
 |**Audience**|Researchers · Practitioners                                                                |Operators · Architects · Governance teams|
-|**Status**  |Observational hypothesis                                                                   |Draft specification                      |
+|**Status**  |Conceptual protocol / public foundation                                                    |Draft specification                      |
+
+-----
+
+## License
+
+**Documentation and governance files** (`docs/`, `governance/`):
+Licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+You may read, share, and adapt with attribution.
+
+**Specification files** (`spec/`):
+All rights reserved — 2026.
+
+Viewing and reference are permitted.
+The following are not permitted without written permission:
+
+- Implementation based on this specification
+- Redistribution of modified versions
+- Commercial deployment based on this specification
+- Derivative works for commercial use
+
+*See LICENSE for full terms.*
 
 -----
 
@@ -164,15 +185,3 @@ Controlled validation has not been completed.
   url={https://github.com/watadani-byte/ai-identity-governance}
 }
 ```
-
------
-
-## License
-
-Documentation and governance files:
-[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
-
-Specification files (`spec/`):
-All rights reserved — 2026
-
-*See LICENSE for details.*
