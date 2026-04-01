@@ -16,7 +16,7 @@ This repository defines how to govern it.
 AI systems do not maintain identity automatically.
 
 Across sessions, turns, and platforms, responses drift —
-in tone, in role, in social impression, in behavioral register.
+in tone, in role, in behavioral posture, in interactional register.
 
 This is not a configuration error.
 It is the expected behavior of probabilistic generative systems.
@@ -31,7 +31,7 @@ and audit integrity may already be significant.
 
 This repository defines an operational control layer
 for AI systems that require identity-consistent,
-auditable, and governable behavior.
+auditable, and controlled behavior.
 
 It is not a prompt engineering guide.
 It is not a model fine-tuning framework.
@@ -42,7 +42,7 @@ without model modification.
 The framework addresses:
 
 - How to define identity as a controlled variable
-- How to detect drift before it becomes failure
+- How to detect drift before it becomes operational failure
 - How to intervene safely and consistently
 - How to recover with human approval
 - How to maintain an auditable record of all decisions
@@ -146,7 +146,7 @@ Controlled validation has not been completed.
 |            |[character-identity-protocol](https://github.com/watadani-byte/character-identity-protocol)|ai-identity-governance                   |
 |------------|-------------------------------------------------------------------------------------------|-----------------------------------------|
 |**Focus**   |Identity governance primitives                                                             |Operational control layer                |
-|**Layer**   |Foundational governance framework                                                          |Implementation and specification         |
+|**Layer**   |Foundational governance framework                                                          |Operational control specification        |
 |**Audience**|Researchers · Practitioners                                                                |Operators · Architects · Governance teams|
 |**Status**  |Conceptual protocol / public foundation                                                    |Draft specification                      |
 
@@ -161,7 +161,7 @@ You may read, share, and adapt with attribution.
 **Specification files** (`spec/`):
 All rights reserved — 2026.
 
-Viewing and reference are permitted.
+Viewing and conceptual reference are permitted.
 The following are not permitted without written permission:
 
 - Implementation based on this specification
