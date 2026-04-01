@@ -107,12 +107,12 @@ but monitoring is intensified and intervention readiness raised.
 Drift containment active. System capability reduced
 to a protected operational state.
 
-|Dimension            |Definition                                                       |
-|---------------------|-----------------------------------------------------------------|
-|Allowed operations   |Reduced capability responses only                                |
-|Restricted operations|Full capability responses suspended                              |
-|Required monitoring  |Continuous. Human consultation required.                         |
-|Exit conditions      |Containment successful → L1 or L0 / Containment insufficient → L3|
+|Dimension            |Definition                                                                                                                       |
+|---------------------|---------------------------------------------------------------------------------------------------------------------------------|
+|Allowed operations   |Reduced capability responses only                                                                                                |
+|Restricted operations|Full capability responses suspended                                                                                              |
+|Required monitoring  |Continuous. Human consultation required.                                                                                         |
+|Exit conditions      |Containment successful → transition to L1 / Sustained resolution after L1 guard satisfaction → L0 / Containment insufficient → L3|
 
 -----
 
@@ -150,15 +150,15 @@ before re-convergence to normal operation.
 
 ### Transition Table
 
-|From|To|Trigger                                     |Guard Condition                               |Human Required?|Logging |
-|----|--|--------------------------------------------|----------------------------------------------|---------------|--------|
-|L0  |L1|Drift indicators exceed L1 threshold        |Threshold confirmed by monitoring layer       |Notification   |Required|
-|L1  |L0|Drift indicators resolve below L0 threshold |Sustained resolution confirmed                |None           |Required|
-|L1  |L2|Drift indicators exceed L2 threshold        |Threshold confirmed                           |Notification   |Required|
-|L2  |L1|Containment successful. Indicators reduced. |Sustained improvement confirmed               |Consultation   |Required|
-|L2  |L3|Containment insufficient. Indicators worsen.|Threshold confirmed                           |Notification   |Required|
-|L3  |L4|Human review initiated                      |Operator acknowledgment received              |Mandatory      |Required|
-|L4  |L0|Human approval granted                      |Recovery Procedure completed. L0 criteria met.|Approval       |Required|
+|From|To|Trigger                                     |Guard Condition                               |Human Action    |Logging |
+|----|--|--------------------------------------------|----------------------------------------------|----------------|--------|
+|L0  |L1|Drift indicators exceed L1 threshold        |Threshold confirmed by monitoring layer       |Notification    |Required|
+|L1  |L0|Drift indicators resolve below L0 threshold |Sustained resolution confirmed                |None            |Required|
+|L1  |L2|Drift indicators exceed L2 threshold        |Threshold confirmed                           |Notification    |Required|
+|L2  |L1|Containment successful. Indicators reduced. |Sustained improvement confirmed               |Consultation    |Required|
+|L2  |L3|Containment insufficient. Indicators worsen.|Threshold confirmed                           |Mandatory review|Required|
+|L3  |L4|Human review initiated                      |Operator acknowledgment received              |Mandatory review|Required|
+|L4  |L0|Human approval granted                      |Recovery Procedure completed. L0 criteria met.|Approval        |Required|
 
 ### Guard Conditions
 
@@ -188,6 +188,7 @@ Re-convergence validation must pass before L0 is declared.
 The following transitions are explicitly prohibited:
 
 - L3 → L0 (direct) — Recovery must pass through L4
+- L2 → L0 (direct) — Containment must resolve through L1 first
 - L4 → L1 or L2 — Recovery must return to L0
 - Any state → L0 without guard condition satisfied
 
@@ -325,7 +326,7 @@ in the Responsibility Matrix.
 
 -----
 
-## Role Mapping
+## 7. Role Mapping
 
 Role definitions and authority boundaries are described in the
 [Responsibility Matrix](../governance/responsibility-matrix.md).
