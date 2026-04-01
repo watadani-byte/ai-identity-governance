@@ -107,12 +107,12 @@ but monitoring is intensified and intervention readiness raised.
 Drift containment active. System capability reduced
 to a protected operational state.
 
-|Dimension            |Definition                                                                                                                       |
-|---------------------|---------------------------------------------------------------------------------------------------------------------------------|
-|Allowed operations   |Reduced capability responses only                                                                                                |
-|Restricted operations|Full capability responses suspended                                                                                              |
-|Required monitoring  |Continuous. Human consultation required.                                                                                         |
-|Exit conditions      |Containment successful → transition to L1 / Sustained resolution after L1 guard satisfaction → L0 / Containment insufficient → L3|
+|Dimension            |Definition                                                               |
+|---------------------|-------------------------------------------------------------------------|
+|Allowed operations   |Reduced capability responses only                                        |
+|Restricted operations|Full capability responses suspended                                      |
+|Required monitoring  |Continuous. Human consultation required.                                 |
+|Exit conditions      |Containment successful → transition to L1 / Containment insufficient → L3|
 
 -----
 
@@ -137,12 +137,12 @@ System enters defined stop state.
 System awaiting human review and explicit approval
 before re-convergence to normal operation.
 
-|Dimension            |Definition                                      |
-|---------------------|------------------------------------------------|
-|Allowed operations   |None — system in standby                        |
-|Restricted operations|All response generation suspended               |
-|Required monitoring  |Approval process tracking. All actions logged.  |
-|Exit conditions      |Human approval granted → Recovery Procedure → L0|
+|Dimension            |Definition                                            |
+|---------------------|------------------------------------------------------|
+|Allowed operations   |None — system in standby                              |
+|Restricted operations|All response generation suspended                     |
+|Required monitoring  |Approval process tracking. All actions logged.        |
+|Exit conditions      |Recovery Procedure completed and approval granted → L0|
 
 -----
 
@@ -150,15 +150,15 @@ before re-convergence to normal operation.
 
 ### Transition Table
 
-|From|To|Trigger                                     |Guard Condition                               |Human Action    |Logging |
-|----|--|--------------------------------------------|----------------------------------------------|----------------|--------|
-|L0  |L1|Drift indicators exceed L1 threshold        |Threshold confirmed by monitoring layer       |Notification    |Required|
-|L1  |L0|Drift indicators resolve below L0 threshold |Sustained resolution confirmed                |None            |Required|
-|L1  |L2|Drift indicators exceed L2 threshold        |Threshold confirmed                           |Notification    |Required|
-|L2  |L1|Containment successful. Indicators reduced. |Sustained improvement confirmed               |Consultation    |Required|
-|L2  |L3|Containment insufficient. Indicators worsen.|Threshold confirmed                           |Mandatory review|Required|
-|L3  |L4|Human review initiated                      |Operator acknowledgment received              |Mandatory review|Required|
-|L4  |L0|Human approval granted                      |Recovery Procedure completed. L0 criteria met.|Approval        |Required|
+|From|To|Trigger                                      |Guard Condition                               |Human Action    |Logging |
+|----|--|---------------------------------------------|----------------------------------------------|----------------|--------|
+|L0  |L1|Drift indicators exceed L1 threshold         |Threshold confirmed by monitoring layer       |Notification    |Required|
+|L1  |L0|Drift indicators resolve below L0 threshold  |Sustained resolution confirmed                |None            |Required|
+|L1  |L2|Drift indicators exceed L2 threshold         |Threshold confirmed                           |Notification    |Required|
+|L2  |L1|Containment successful. Indicators reduced.  |Sustained improvement confirmed               |Consultation    |Required|
+|L2  |L3|Containment insufficient. Indicators worsen. |Threshold confirmed                           |Mandatory review|Required|
+|L3  |L4|Human review initiated                       |Operator acknowledgment received              |Mandatory review|Required|
+|L4  |L0|Human approval granted and recovery initiated|Recovery Procedure completed. L0 criteria met.|Approval        |Required|
 
 ### Guard Conditions
 
