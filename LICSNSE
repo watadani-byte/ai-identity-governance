@@ -7,7 +7,7 @@ Please read both sections carefully before using any materials.
 
 ## Part 1 — Documentation and Governance Files
 
-**Applies to:** `docs/`, `governance/`, `README.md`
+**Applies to:** `docs/`, `governance/`, `images/`, `examples/`, `README.md`
 
 Licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0).
 
@@ -23,6 +23,11 @@ Under the following terms:
 
 Full license text:
 https://creativecommons.org/licenses/by/4.0/
+
+> Note: If `examples/` files contain implementation-level specifications
+> or control flow definitions that substantially reproduce the content
+> of `spec/`, those files will be individually noted as subject to
+> Part 2 terms. Check individual files for license annotations.
 
 -----
 
@@ -42,7 +47,7 @@ Copyright 2026 Watadani. All rights reserved.
 
 The following are not permitted without prior written permission from the copyright holder:
 
-- Implementation of systems based on this specification, in whole or in part
+- Implementation of systems derived from this specification, in whole or in part
 - Redistribution of this specification or modified versions thereof
 - Commercial deployment of any system based on this specification
 - Creation of derivative works for commercial use
@@ -56,7 +61,7 @@ about the suitability of this specification for any purpose.
 
 ### Contact
 
-For licensing inquiries or permission requests, contact via:
+For licensing inquiries or permission requests, please open an issue at:
 https://github.com/watadani-byte/ai-identity-governance
 
 -----
@@ -67,10 +72,10 @@ https://github.com/watadani-byte/ai-identity-governance
 |-------------|----------------------------------------|
 |`docs/`      |CC BY 4.0                               |
 |`governance/`|CC BY 4.0                               |
+|`images/`    |CC BY 4.0                               |
+|`examples/`  |CC BY 4.0 (see note in Part 1)          |
 |`README.md`  |CC BY 4.0                               |
 |`spec/`      |All rights reserved — custom terms above|
-|`images/`    |CC BY 4.0                               |
-|`examples/`  |CC BY 4.0                               |
 
 -----
 
