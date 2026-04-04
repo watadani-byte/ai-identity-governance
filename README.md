@@ -125,6 +125,7 @@ ai-identity-governance/
 - [State Machine](docs/state-machine.md) — L0–L4 specification
 - [Control Protocol v0.2](spec/control-protocol.v0.2.json) — JSON specification (draft)
 - [Responsibility Matrix](governance/responsibility-matrix.md) — Governance and authority
+- [Anomaly Response Protocol](anomaly_response_protocol.md) — *Operational protocol for anomaly detection, stop, report, and authorization requirements*
 
 -----
 
