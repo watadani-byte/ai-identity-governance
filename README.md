@@ -95,12 +95,75 @@ The framework defines five operational states:
 
 -----
 
+## Repository Layers
+
+This repository contains two distinct categories of documents.
+Readers must not treat them as interchangeable.
+
+### Operational / Normative Layer
+
+These documents define binding operational requirements.
+They specify what must happen, what is prohibited,
+and who holds authority to authorize actions.
+
+|Document                             |Function                                                                     |
+|-------------------------------------|-----------------------------------------------------------------------------|
+|`anomaly_response_protocol.md`       |Stop / report / wait protocol. AI authorization boundaries.                  |
+|`governance/responsibility-matrix.md`|Role definitions. Authority by operational state. Destructive action control.|
+|`docs/state-machine.md`              |L0–L4 state transition specification.                                        |
+|`docs/overview.md`                   |Problem definition and governance design principles.                         |
+|`spec/control-protocol.v0.2.json`    |Draft control specification.                                                 |
+
+These documents are not hypotheses.
+They define how the system must behave.
+
+### Hypothesis / Research Layer
+
+These documents record observational findings,
+theoretical extensions, and open validation questions.
+
+|Document                |Function                                                    |
+|------------------------|------------------------------------------------------------|
+|`pal_hypothesis.md`     |PAL infrastructure hypothesis. Observational. Not validated.|
+|`technical_mechanism.md`|Proposed technical mechanisms. Explanatory models only.     |
+|`whitepaper_v1.md`      |Conceptual foundation. Working paper.                       |
+|`column_pal.md`         |Operational context and application notes.                  |
+
+These documents may inform governance design.
+They do not override operational documents.
+Observational hypotheses are not binding rules.
+
+> The operational layer defines how the system must behave.
+> The hypothesis layer defines what may be true
+> and what still requires validation.
+
+-----
+
+## Governance Position
+
+The following principles are non-negotiable
+across all documents in this repository.
+
+- The AI system is not an authority holder.
+- Persistent access does not imply authorization.
+- Destructive actions require explicit written
+  human authorization.
+- Recovery is never automatic.
+- Observational hypotheses do not override
+  operational governance documents.
+
+Governance is not a constraint added after capability.
+It is a precondition for continued human-AI cooperation.
+
+-----
+
 ## Repository Structure
 
 ```
 ai-identity-governance/
 ├── README.md
 ├── LICENSE
+├── anomaly_response_protocol.md  ← Operational anomaly stop/report/authorization protocol
 │
 ├── docs/
 │   ├── overview.md          ← Problem definition and design philosophy
@@ -121,11 +184,18 @@ ai-identity-governance/
 
 ## Documentation
 
+**Operational / Normative**
+
 - [Overview](docs/overview.md) — Problem definition and design philosophy
 - [State Machine](docs/state-machine.md) — L0–L4 specification
 - [Control Protocol v0.2](spec/control-protocol.v0.2.json) — JSON specification (draft)
 - [Responsibility Matrix](governance/responsibility-matrix.md) — Governance and authority
-- [Anomaly Response Protocol](anomaly_response_protocol.md) — *Operational protocol for anomaly detection, stop, report, and authorization requirements*
+- [Anomaly Response Protocol](anomaly_response_protocol.md) — Operational anomaly stop/report/authorization protocol
+
+**Hypothesis / Research**
+
+- [PAL Hypothesis](https://github.com/watadani-byte/character-identity-protocol/blob/main/docs/pal_hypothesis.md) — PAL infrastructure hypothesis (observational)
+- [PAL Column](https://github.com/watadani-byte/character-identity-protocol/blob/main/docs/columns/column_pal.md) — Operational context and application notes
 
 -----
 
