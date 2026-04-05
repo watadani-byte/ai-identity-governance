@@ -157,6 +157,15 @@ This repository is governed by the following principles:
 Governance is not a constraint added after capability.
 It is a precondition for continued human-AI cooperation.
 
+This framework is not only declarative.
+It is written as an operationally actionable
+governance specification.
+
+The L0–L4 state model, Responsibility Matrix,
+and Anomaly Response Protocol translate governance
+principles into concrete operating conditions,
+authority boundaries, and response procedures.
+
 -----
 
 ## Repository Structure
