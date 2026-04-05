@@ -223,6 +223,27 @@ Formal validation has not yet been completed.
 
 -----
 
+## Related Frameworks
+
+This repository is a complementary operational governance layer.
+It does not replace broader AI risk, security,
+or responsible AI frameworks.
+
+Relevant reference points include:
+
+- **NIST AI RMF / Playbook**
+- **OWASP Top 10 for LLM Applications / OWASP GenAI Security Project**
+- **Google Secure AI Framework (SAIF)**
+- **Microsoft Responsible AI Standard / Impact Assessment guidance**
+
+Those frameworks address broader risk, security,
+and responsible AI concerns.
+This repository focuses more narrowly on authority boundaries,
+anomaly handling, recovery control,
+and persistence-governed drift control.
+
+-----
+
 ## Relation to CIP Repository
 
 |            |[character-identity-protocol](https://github.com/watadani-byte/character-identity-protocol)|ai-identity-governance                   |
